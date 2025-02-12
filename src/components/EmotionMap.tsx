@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { MapContainer, TileLayer, CircleMarker, Popup } from 'react-leaflet';
+import { MapContainer, TileLayer, CircleMarker, Popup, ZoomControl } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import FileUpload from './FileUpload';
 import Legend from './Legend';
@@ -308,7 +308,9 @@ const EmotionMap = () => {
         center={[0, 20]}
         zoom={3}
         style={{ height: '100%', width: '100%' }}
+        zoomControl={false}
       >
+        <ZoomControl position="topleft" />
         {/* Dynamic TileLayer based on selected basemap */}
         <TileLayer
           key={selectedBasemap} // Key helps force re-render
