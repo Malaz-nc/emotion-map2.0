@@ -308,12 +308,13 @@ const EmotionMap = () => {
         center={[0, 20]}
         zoom={5}
         style={{ height: '100%', width: '100%' }}
+        zoomControl={false} // Disable the default zoom controls
       >
         {/* Dynamic TileLayer based on selected basemap */}
         <TileLayer
-          key={selectedBasemap} // Key helps force re-render
-          url={basemapLayers[selectedBasemap].url}
-          attribution={basemapLayers[selectedBasemap].attribution}
+           key={selectedBasemap} // Key helps force re-render
+            url={basemapLayers[selectedBasemap].url}
+            attribution={basemapLayers[selectedBasemap].attribution}
         />
         {filteredLocations.map((location, index) => (
           <CircleMarker
