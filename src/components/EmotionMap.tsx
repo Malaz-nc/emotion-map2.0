@@ -306,7 +306,7 @@ const EmotionMap = () => {
 
       <MapContainer
         center={[0, 20]}
-        zoom={5}
+        zoom={3}
         style={{ height: '100%', width: '100%' }}
       >
         {/* Dynamic TileLayer based on selected basemap */}
