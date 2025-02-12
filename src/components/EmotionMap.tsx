@@ -306,11 +306,11 @@ const EmotionMap = () => {
 
       <MapContainer
         center={[0, 20]}
-        zoom={3}
+        zoom={4}
         style={{ height: '100%', width: '100%' }}
         zoomControl={false}
       >
-        <ZoomControl position="topleft" />
+        <ZoomControl position="bottomcenter" />
         {/* Dynamic TileLayer based on selected basemap */}
         <TileLayer
           key={selectedBasemap} // Key helps force re-render
